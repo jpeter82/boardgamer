@@ -7,6 +7,25 @@
     <groupId>com.jpeter</groupId>
     <artifactId>boardgamer</artifactId>
     <version>1.0-SNAPSHOT</version>
-
-    
+    <properties>
+        <version.java>1.8</version.java>
+        <version.maven.compiler.plugin>3.6.2</version.maven.compiler.plugin>
+    </properties>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${version.maven.compiler.plugin}</version>
+                <inherited>true</inherited>
+                <configuration>
+                    <source>${version.java}</source>
+                    <target>${version.java}</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 </project>
